@@ -1,0 +1,75 @@
+# Day 03 - Process Management
+
+## Objective
+
+Learn how Linux manages running programs and how to monitor, control, stop, resume, terminate, and change the priority of processes.
+
+## Topics Covered
+
+* Program vs Process
+* Process ID (PID)
+* Foreground and Background Processes
+* Process Monitoring
+* Process Signals
+* Stop and Resume Processes
+* Process Termination
+* Nice Value and Process Priority
+* `renice`
+
+## Important Commands
+
+| Command          | Purpose                                    |
+| ---------------- | ------------------------------------------ |
+| `ps`             | Display processes                          |
+| `ps aux`         | Display detailed process information       |
+| `pgrep`          | Find a process PID                         |
+| `top`            | Monitor processes in real time             |
+| `htop`           | Interactive process monitoring             |
+| `jobs`           | Display background jobs                    |
+| `bg`             | Resume a stopped job in background         |
+| `fg`             | Bring a job to foreground                  |
+| `kill PID`       | Terminate a process normally               |
+| `kill -9 PID`    | Forcefully terminate a process             |
+| `kill -STOP PID` | Stop/pause a process                       |
+| `kill -CONT PID` | Resume a stopped process                   |
+| `nice`           | Start a process with a specific nice value |
+| `renice`         | Change the nice value of a running process |
+
+## Process Priority
+
+Linux uses a **nice value** to influence CPU scheduling priority.
+
+```text
+-20  → Highest priority
+  0  → Normal priority
++19  → Lowest priority
+```
+
+Remember:
+
+> Lower nice value = Higher priority
+
+> Higher nice value = Lower priority
+
+## Example
+
+```bash
+sleep 300 &
+pgrep sleep
+ps -o pid,ni,comm -p PID
+renice -n 10 -p PID
+```
+
+## Learning Outcome
+
+After completing this day, I understand how to:
+
+* Identify running processes
+* Find process IDs
+* Monitor CPU and memory usage
+* Run processes in foreground and background
+* Stop and resume processes
+* Terminate processes using signals
+* Understand Linux process signals
+* Change process scheduling priority using `renice`
+
