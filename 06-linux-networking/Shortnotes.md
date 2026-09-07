@@ -15,3 +15,17 @@
 | `./commands/network-info.sh` | **Runs networking commands automatically** |
 | `chmod +x network-info.sh`   | **Makes script executable**                |
 
+minimal short notes :
+ip link       → Network interfaces
+ip addr       → IP addresses
+hostname -I   → Machine IP
+ip route      → Gateway / routes
+ping          → Connectivity
+curl          → HTTP request
+nslookup      → DNS lookup
+dig           → DNS details
+dig +short    → DNS IP
+ss -tuln      → Listening ports
+ss -tulpn     → Ports + processes
+./script.sh   → Run script
+chmod +x      → Make executable
