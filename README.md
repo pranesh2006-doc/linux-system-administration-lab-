@@ -28,3 +28,21 @@ linux/
 │
 └── 06-linux-networking/
     └── Linux networking commands and concepts
+
+[████████████████████] Linux Basics
+
+[████████████████████] File Permissions
+
+[████████████████████] Process Management
+
+[████████████████████] System Monitoring
+
+[████████████████████] Disk Management
+
+[████████████████████] Networking
+
+[░░░░░░░░░░░░░░░░░░░░] Bash Scripting
+
+[░░░░░░░░░░░░░░░░░░░░] Docker
+
+[░░░░░░░░░░░░░░░░░░░░] AWS & DevOps
